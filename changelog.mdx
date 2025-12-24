@@ -1,0 +1,162 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to Mahmoud Nasif.
+---
+
+## Overview
+
+Stay informed about the latest releases of Mahmoud Nasif, your default documentation space for organizing project docs. This changelog highlights new features, improvements, bug fixes, and any breaking changes. You receive notifications for major updates via the dashboard.
+
+<Callout kind="tip">
+  Subscribe to updates in your account settings at `https://dashboard.example.com/settings/notifications` to get email alerts for new releases.
+</Callout>
+
+## Recent Releases
+
+<Update label="2024-11-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added support for custom brand colors, like `#3B82F6`, in your documentation themes.
+- Introduced `<Video>` and `<Iframe>` components for embedding media directly in MDX pages.
+
+## Improvements
+
+- Enhanced MDX parsing with better special character escaping for `{` and `<` in prose.
+- Optimized rendering performance for pages with multiple `<Columns>` and `<Tabs>` components.
+
+## Bug Fixes
+
+- Fixed parsing errors in nested code blocks using 4 backticks.
+- Resolved heading hierarchy issues when starting with H2 only.
+
+</Update>
+
+<Update label="2024-10-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- New `<ParamField>` and `<ResponseField>` components for API documentation.
+- Added `tags` support to `<Update>` components for better categorization.
+
+## Bug Fixes
+
+- Corrected JSX attribute syntax requiring double quotes for strings.
+- Fixed Mermaid diagram rendering by enforcing code block syntax only.
+
+</Update>
+
+<Update label="2024-09-10" description="v1.0.0" tags={["breaking", "feature"]}>
+
+## Breaking Changes
+
+- Removed H1 headings from body content; always start with H2.
+- Updated component attributes to require PascalCase and exact syntax.
+
+## New Features
+
+- Initial release with core components: `<Callout>`, `<Card>`, `<Steps>`, `<Tabs>`.
+- Full MDX support with YAML frontmatter validation.
+
+## Initial Setup
+
+To upgrade:
+
+<CodeGroup tabs="bash,npm">
+
+````bash
+# Using npm
+npm update mahmoud-nasif
+````
+
+````bash
+# Using direct download
+curl -o latest.tar.gz https://dashboard.example.com/download/v1.2.0
+````
+
+</CodeGroup>
+
+</Update>
+
+## Change Summary
+
+| Version | Date       | Type              | Key Changes                  |
+|---------|------------|-------------------|------------------------------|
+| v1.2.0 | 2024-11-15 | Feature, Improvement | Custom colors, media embeds |
+| v1.1.0 | 2024-10-20 | Feature, Bugfix   | API fields, Mermaid fixes   |
+| v1.0.0 | 2024-09-10 | Breaking, Feature | Core components, MDX rules  |
+
+## Upcoming Roadmap
+
+<Columns cols={3}>
+
+<Card title="v1.3.0" icon="zap" href="#">
+
+Real-time collaboration editing.
+
+</Card>
+
+<Card title="v1.4.0" icon="shield" href="#">
+
+Advanced security with API key rotation.
+
+</Card>
+
+<Card title="v2.0.0" icon="rocket" href="#">
+
+AI-powered content generation.
+
+</Card>
+
+</Columns>
+
+<ExpandableGroup>
+
+<Expandable title="How to Migrate from v1.0.0" default-open="true">
+
+Follow these steps for breaking changes:
+
+<Steps>
+
+<Step title="Update Frontmatter">
+
+Ensure no blank lines inside YAML.
+
+</Step>
+
+<Step title="Fix Headings">
+
+Replace all `# H1` with `## H2`.
+
+```javascript
+// Before (wrong)
+# Title
+
+// After (correct)
+## Title
+```
+
+</Step>
+
+<Step title="Escape Specials">
+
+Wrap `{API_KEY}` and `<100ms` in backticks.
+
+</Step>
+
+</Steps>
+
+</Expandable>
+
+<Expandable title="Contribute to Changelog">
+
+Submit pull requests with new `<Update>` entries following the format.
+
+</Expandable>
+
+</ExpandableGroup>
+
+<Callout kind="info">
+
+Check `https://dashboard.example.com/changelog` regularly or follow us on GitHub for previews.
+</Callout>

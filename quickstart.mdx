@@ -1,0 +1,152 @@
+---
+title: Getting Started with Mahmoud Nasif
+description: Set up your account and create your first documentation project in minutes.
+---
+
+## Prerequisites
+
+<Callout kind="info">
+
+Before starting, ensure you have:
+
+- A modern web browser (Chrome, Firefox, Safari, or Edge)
+- An email address for account verification
+- Optional: GitHub account for repository integration
+
+</Callout>
+
+## Create Your Account and Log In
+
+Follow these steps to set up your Mahmoud Nasif account and access the dashboard.
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+    Visit `https://app.mahmoudnasif.com/signup`.
+
+    Fill in your email, password, and display name. Click **Create Account**.
+
+    Verify your email by clicking the link sent to your inbox.
+  </Step>
+  <Step title="Log In" icon="log-in">
+    Go to `https://app.mahmoudnasif.com/login`.
+
+    Enter your credentials and click **Sign In**.
+
+    You'll land on the dashboard at `https://dashboard.mahmoudnasif.com`.
+  </Step>
+</Steps>
+
+## Create Your First Documentation Space
+
+A documentation space organizes your project docs.
+
+<Steps>
+  <Step title="New Space" icon="plus">
+    From the dashboard, click **New Space**.
+
+    Enter a name like `My Project Docs` and select a slug (e.g., `my-project`).
+
+    Choose **Public** or **Private** visibility.
+  </Step>
+  <Step title="Configure Basics" icon="settings">
+    Add a description: "Documentation for my awesome project."
+
+    Optionally, link a GitHub repo for version control.
+  </Step>
+</Steps>
+
+## Upload Initial Project Files
+
+Populate your space with content.
+
+<Tabs>
+  <Tab title="Web Upload" icon="upload">
+    Drag and drop your Markdown files (`.mdx`, `.md`) into the file manager.
+
+    Or click **Upload Files** and select from your computer.
+
+    Supported formats include images (PNG, SVG, JPG) and code assets.
+  </Tab>
+  <Tab title="CLI Upload" icon="terminal">
+    Install the CLI:
+
+    <CodeGroup tabs="npm,yarn">
+    ````bash
+    npm install -g @mahmoudnasif/cli
+    ````
+    ````bash
+    yarn global add @mahmoudnasif/cli
+    ````
+    </CodeGroup>
+
+    Authenticate and upload:
+
+    ````bash
+    mahmoudnasif login --email your@email.com
+    mahmoudnasif space upload my-project ./docs/
+    ````
+  </Tab>
+</Tabs>
+
+## Basic Interface Tour
+
+<ExpandableGroup>
+  <Expandable title="Dashboard Overview" default-open="true">
+    The main dashboard shows your spaces, recent edits, and analytics.
+
+    - **Spaces List**: Manage all your doc projects
+    - **Editor**: Real-time MDX preview
+    - **Preview Pane**: Live site rendering
+  </Expandable>
+  <Expandable title="Editor Features">
+    Supports syntax highlighting, auto-complete, and component insertion.
+
+    Key sections:
+    - File tree (left sidebar)
+    - Properties panel (right sidebar)
+  </Expandable>
+</ExpandableGroup>
+
+## Create Your First Document
+
+<Steps>
+  <Step title="New Document" icon="file-plus">
+    In your space, click **New Document**.
+
+    Name it `introduction.mdx` and add frontmatter:
+
+    ````mdx
+    ---
+    title: Introduction
+    description: Welcome to my project
+    ---
+    ## Hello World
+    ```
+    ````
+  </Step>
+  <Step title="Publish" icon="globe">
+    Click **Publish** to generate your live docs site.
+
+    Share the URL: `https://docs.mahmoudnasif.com/my-project/introduction`.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+
+Congratulations! You've created your first documentation space. Next, explore advanced features like custom domains or API integrations.
+
+</Callout>
+
+## Next Steps
+
+<Columns cols={3}>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your spaces with API keys and webhooks.
+  </Card>
+  <Card title="Customization" icon="palette" href="/configuration">
+    Theme your docs with brand colors like `#3B82F6`.
+  </Card>
+  <Card title="Advanced Guides" icon="book-open" href="/introduction">
+    Dive deeper into MDX components and workflows.
+  </Card>
+</Columns>
